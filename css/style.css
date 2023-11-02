@@ -1,13 +1,33 @@
+:root {                    /*Es un Custome Property util para definir los colores*/
+    --blanco: #ffffff;  /*Creo mi propia paleta de colores*/
+    --negro: #212121;
+    --amarillo: #ff9300;
+    --azul: #0000FF;
+    --gris: #757575;    
+
+    --titulodegrad: rgba()
+
+    /*Tambien puedo configurar otros detalles como por ejemplo*/
+
+    --fuente--principal: 3.8rem;
+}
+
 html {
-    font-size: 62.5%;
+    font-size: 62.5%;   /*Colocar estas lineas de Html y body en todos los proyecto*/
 }
 
 body {
-    font-size:16px;
+    font-size:16px; /*1rem  =  10px* con el coment de arriba puedo trabajar mejor los rem*/
+    font-family: 'Krub', sans-serif;
 }
 
-h1 {
+.titulo {
     text-align: center;
+    font-size: 3.8rem;
+    /*font-size: var(--fuente--principal); Lo reemplazo para utilizar mis variale creada en root*/
+    
+}
+
+.titulo span {
     font-size: 2rem;
-    width: 20rem;
 }
