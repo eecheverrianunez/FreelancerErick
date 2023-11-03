@@ -5,7 +5,8 @@
     --azul: #0000FF;
     --gris: #757575;    
 
-    --titulodegrad: rgba()
+    
+
 
     /*Tambien puedo configurar otros detalles como por ejemplo*/
 
@@ -34,12 +35,36 @@ body {
 
 .contenedor {
     width: 120rem;
-    margin-top: 0;   /*Margen arriba*/
-    margin-right: auto;  /*Margen a la derecha*/
-    margin-bottom: 0;  /*Margen a abajo*/
-    margin-left: auto;   /*Margen a la izquierda*/
+   /* margin-top: 0; */  /*Margen arriba*/
+   /* margin-right: auto; */  /*Margen a la derecha*/
+   /* margin-bottom: 0; */ /*Margen a abajo*/
+   /* margin-left: auto; */ /* Margen a la izquierda */
+
+   /* margin: 0 auto 0 auto; */ /*Este codigo hace lo mismo que de arriba*/
+
+    margin: 0 auto;  /*cuando todos los margenes de repiten puedo colocar solo los dos primeros*/
+} 
+
+.nav-bg {
+    background-color: var(--azul);
 }
 
+
 .navegacion-principal {
-    background-color: var(--azul);
+    display: flex;  /*habilito flexbox para editar opciones de menu. Tener en cuenta la clase padre*/
+    justify-content: space-between; distribuye opciones de menu de manera uniforme
+}
+
+.navegacion-principal a {
+    color: var(--blanco);  /* Cambio el color del texto del menu*/
+    text-decoration: none;  /*Quito la linea de abajo en los texto*/
+    font-size: 2rem;  /*tamaño del a letra del menu*/
+    font-weight: 700;  /*colocar en negrilla - ambien puedo cambiar el valor 700 por la palabral bold*/
+    padding: 1rem;  /*Agrega un 1rem de espacio al rededor del contenedor*/
+}
+
+.navegacion-principal a:hover {   /*esto es un pseudoclase le da efecto al boton */
+    background-color: var(--amarillo);
+    color: var(--negro);
+    
 }
