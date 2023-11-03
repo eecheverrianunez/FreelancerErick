@@ -34,10 +34,10 @@ body {
 
 .contenedor {
     width: 120rem;
-    margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;
+    margin-top: 0;   /*Margen arriba*/
+    margin-right: auto;  /*Margen a la derecha*/
+    margin-bottom: 0;  /*Margen a abajo*/
+    margin-left: auto;   /*Margen a la izquierda*/
 }
 
 .navegacion-principal {
