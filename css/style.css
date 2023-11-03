@@ -29,12 +29,14 @@ body {
     
 }
 
+
 .titulo span {
     font-size: 2rem;
 }
 
 .contenedor {
-    width: 120rem;
+    max-width: 120rem;  /*Le digo que tome máximo 1200 px o 120 rem */
+   /* width: 120rem; le agrego max-width para aplicar responsive disign"
    /* margin-top: 0; */  /*Margen arriba*/
    /* margin-right: auto; */  /*Margen a la derecha*/
    /* margin-bottom: 0; */ /*Margen a abajo*/
@@ -52,10 +54,19 @@ body {
 
 .navegacion-principal {
     display: flex;  /*habilito flexbox para editar opciones de menu. Tener en cuenta la clase padre*/
-    justify-content: space-between; distribuye opciones de menu de manera uniforme
+    flex-direction: column;  /*para volver el menu responsive */
+    justify-content: space-between; /*distribuye opciones de menu de manera uniforme*/
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row; /*para volver el menu responsive */
+    }
 }
 
 .navegacion-principal a {
+    display: block;   /*Agrego esta linea para centrar opciones de menu en pantallas moviles */
+    text-align: center;  /*Agrego esta linea para centrar opciones de menu en pantallas moviles */
     color: var(--blanco);  /* Cambio el color del texto del menu*/
     text-decoration: none;  /*Quito la linea de abajo en los texto*/
     font-size: 2rem;  /*tamaño del a letra del menu*/
