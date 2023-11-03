@@ -15,6 +15,16 @@
 html {
     font-size: 62.5%;   /*Colocar estas lineas de Html y body en todos los proyecto*/
     box-sizing: border-box; /*hack para box model */ 
+    scroll-snap-type: y mandatory; /*al escrolear para en cada seccion de la página*/
+}
+
+/*Scroll Sanp*/
+
+.servicios, 
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-padding-top: always;
 }
 
 *, *:before, *:after {
@@ -69,6 +79,7 @@ h1, h2, h3 {
     font-weight: bold;
     width: 90%;
     text-align: center;
+    border: none;
 }
 
 @media (min-width: 768px) {
@@ -78,8 +89,33 @@ h1, h2, h3 {
     
 }
 
+.boton:hover {
+    cursor: pointer;
+}
+
 .titulo span {
     font-size: 2rem;
+}
+
+/*Utilidades*/
+
+.w-sm-100 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear-derecha{
+    justify-content: flex-end;
 }
 
 .contenedor {
@@ -193,3 +229,76 @@ h1, h2, h3 {
     justify-content: space-evenly; /*separa mejor los iconos en los circulor ver variedad en impeccionar navegador*/
     align-items: center;
 }
+
+/** Contacto **/
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin:  auto;
+    padding: 2rem;
+    border-radius: 1rem;    /*Utiliza el valor mas pequeño*/
+
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--amarillo);
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }    
+
+    .campo:nth-child(3), /*reviso la posicion de la clase que quiero tomar en cuenta*/
+    .campo:nth-child(4){
+        grid-column: 1 / 3;
+    }
+
+}
+
+
+
+.formulario fieldset {
+    border: none;  /**quita el borde que coloca por defecto al rededor del formulario**/
+}
+
+.campos {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+
+}
+
+.campo textarea {
+    height: 20rem;
+}
+
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+
+/**Footer**/
+
+.footer {
+    text-align: center;
+}
+
