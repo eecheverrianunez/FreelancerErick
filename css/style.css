@@ -15,6 +15,11 @@
 
 html {
     font-size: 62.5%;   /*Colocar estas lineas de Html y body en todos los proyecto*/
+    box-sizing: border-box; /*Agrego esta referencia */ 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;  /*Agrego esta referencia */ 
 }
 
 body {
@@ -78,4 +83,22 @@ body {
     background-color: var(--amarillo);
     color: var(--negro);
     
+}
+
+.hero {
+    background-image: url(../img/hero.jpg); /*llamo la foto para el fondo*/
+    background-repeat: no-repeat;  /*para que no se repita la imagen*/
+    background-size: cover;       /*para que ocupe todo el ancho de la pantalla*/
+    height: 41rem;
+    /*padding: 2rem;  lo quito para que la sombra coja toda la imagen*/  
+    position: relative;   /*para la sompbra el padre queda con posicion relativa siempre*/
+
+}
+.contenido-hero {
+    position: absolute;  /*para la sompbra el hijo queda con posicion absoluta*/
+    background-color: rgba( 0,0,0, .7); /*Dejo esta sintaxis porque es la vieja */
+    background-color: rgb(0 0 0 / 70%); /*nueva sintaxi pero tiene soporte en todos los navegadores*/
+    width: 100%;
+    height: 100%;
+
 }
