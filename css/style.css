@@ -157,3 +157,39 @@ h1, h2, h3 {
 .contenido-hero p {
     color: var(--blanco);
 }
+
+/*Servicios*/
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem; /*Me da una separacion entre las columnas */
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--azul);
+    font-weight: normal;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+    font-weight: normal;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--amarillo);
+    border-radius: 50%;  /*Si tengo un cuadrado de 15rem el border-radius a 50% es un circulo perfecto*/
+    display: flex;
+    justify-content: space-evenly; /*separa mejor los iconos en los circulor ver variedad en impeccionar navegador*/
+    align-items: center;
+}
