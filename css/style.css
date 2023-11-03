@@ -3,19 +3,18 @@
     --negro: #212121;
     --amarillo: #ff9300;
     --azul: #0000FF;
-    --gris: #757575;    
-
-    
+    --gris: #757575;
+    --azulclaro: #4F57EF;
 
 
     /*Tambien puedo configurar otros detalles como por ejemplo*/
-
     --fuente--principal: 3.8rem;
 }
 
+/*Gobales*/
 html {
     font-size: 62.5%;   /*Colocar estas lineas de Html y body en todos los proyecto*/
-    box-sizing: border-box; /*Agrego esta referencia */ 
+    box-sizing: border-box; /*hack para box model */ 
 }
 
 *, *:before, *:after {
@@ -25,15 +24,59 @@ html {
 body {
     font-size:16px; /*1rem  =  10px* con el coment de arriba puedo trabajar mejor los rem*/
     font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--azulclaro) 0%, var(--blanco) 100% );
+}   
+
+.sombra {
+    sombra de cuadro: 4px 4px 5px 0px rgba(109,103,103,0.75);
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(109,103,103,0.75);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(109,103,103,0.75);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 0.5rem;
+
 }
 
-.titulo {
-    text-align: center;
+
+h1 {
     font-size: 3.8rem;
-    /*font-size: var(--fuente--principal); Lo reemplazo para utilizar mis variale creada en root*/
+}
+
+h2 {
+
+    font-size: 2.8rem;
+
+}
+
+h3 {
+
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.boton {
+    background-color: var(--azul);
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;      /*para separar un poco el boton de la parte de arriba*/
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    text-transform: uppercase; /*para volver el texto en mayusculas*/
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
     
 }
-
 
 .titulo span {
     font-size: 2rem;
@@ -51,6 +94,8 @@ body {
 
     margin: 0 auto;  /*cuando todos los margenes de repiten puedo colocar solo los dos primeros*/
 } 
+
+
 
 .nav-bg {
     background-color: var(--azul);
@@ -92,6 +137,7 @@ body {
     height: 41rem;
     /*padding: 2rem;  lo quito para que la sombra coja toda la imagen*/  
     position: relative;   /*para la sompbra el padre queda con posicion relativa siempre*/
+    margin-bottom: 2rem;   /*Lo agrego para separa un poco la imagen de la caja de servicios*/ 
 
 }
 .contenido-hero {
@@ -100,5 +146,14 @@ body {
     background-color: rgb(0 0 0 / 70%); /*nueva sintaxi pero tiene soporte en todos los navegadores*/
     width: 100%;
     height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
 }
